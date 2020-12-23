@@ -1,0 +1,752 @@
+/*
+==============
+CSS for - Personal
+Muhammad Adam Firdaus Dec 2020
+==============
+*/
+
+/* start centering image */
+@mixin center-image {
+  width: auto;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+}
+
+@mixin centerImage($centerImage) {
+  @if($centerImage){
+    @include center-image;
+  } @else {
+    width: 100%;
+  }
+}
+/* end centering image */
+
+// padding
+@mixin paddingWrapperDesktopHD {
+  padding-left: 16.8rem;
+  padding-right: 16.8rem;
+}
+
+@mixin paddingWrapperDesktop {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+@mixin paddingWrapperMobile {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-Black.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-BlackItalic.woff") format("woff");
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-BoldItalic.woff") format("woff");
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-Heavy.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-HeavyItalic.woff") format("woff");
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-LightItalic.woff") format("woff");
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-MediumItalic.woff") format("woff");
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-RegularItalic.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-Semibold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-SemiboldItalic.woff") format("woff");
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-Thin.woff") format("woff");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-ThinItalic.woff") format("woff");
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-Ultralight.woff") format("woff");
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	src: url("././fonts/SF-Pro-Display-UltralightItalic.woff") format("woff");
+	font-weight: 100;
+	font-style: italic;
+}
+
+@font-face {
+  font-family: 'maf';
+  src:  url('fonts/maf.eot?9i4opf');
+  src:  url('fonts/maf.eot?9i4opf#iefix') format('embedded-opentype'),
+    url('fonts/maf.ttf?9i4opf') format('truetype'),
+    url('fonts/maf.woff?9i4opf') format('woff'),
+    url('fonts/maf.svg?9i4opf#maf') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'maf' !important;
+  // speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-love:before {
+  content: "\e910";
+  color: #ed1f24;
+}
+.icon-clipboard:before {
+  content: "\e90f";
+}
+.icon-behance:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-dribbble:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-email:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-facebook:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-github:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-instagram:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-link:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-linkedin:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-medium-new:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-medium-old:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-pinterest:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-slack:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-twitter:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-whatsapp:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-youtube:before {
+  content: "\e90e";
+  color: #fff;
+}
+
+// variables
+$desktopFullHD: 'screen and (min-width: 1920px)';
+$desktopHD: 'screen and (min-width: 1500px) and (max-width: 1919px)';
+$desktop: 'screen and (min-width: 800px) and (max-width: 1439px)';
+$desktopHDPI: 'only screen and (min-width: 1440px) and (max-width: 1499px)';
+$desktopMDPI: 'only screen and (min-width: 1280px) and (max-width: 1365px)';
+$desktopGeneral: 'screen and (min-width: 800px)';
+$mobileGeneral: 'screen and (max-width: 800px)';
+$mobile7inch: 'screen and (min-width: 600px) and (max-width: 800px)';
+$mobile6inch: 'screen and (min-width: 375px) and (max-width: 599px)';
+$mobile5inch: 'screen and (max-width: 320px)';
+$ipadLandscape: 'only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)';
+$ipadPortrait: 'only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)';
+$ipadProLandscape: 'only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape)';
+$ipadProPortrait: 'only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)';
+
+
+// reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, section {
+  display: block;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+p,
+span {
+	color: #bbb;
+	margin: 0;
+	font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.45rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+	margin-bottom: 0.5rem;
+}
+
+p a,
+span a {
+	color: #fff;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+h1, h2, h3, h4 {
+	color: #fff;
+	margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 4.5rem;
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 2.5rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.313rem;
+	font-weight: 500;
+	line-height: 1rem;
+}
+
+img {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/*.preload {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,0.8);
+} */
+
+/* start below */
+
+.col {
+  & > .wrapper {
+    display: flex;
+  }
+
+  &.col-2 {
+    & > .wrapper {
+      & > * {
+        flex-basis: 50%;
+      }
+    }
+  }
+}
+
+#root,
+.App {
+	height: 100%;
+}
+
+// .App section {
+// 	height: 100%;
+// }
+
+section,
+footer {
+	// background: radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%);
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+80&0.75+1,1+100 */
+	background: -moz-radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  & > .wrapper {
+		height: 100%;
+    @media #{$desktopFullHD}{
+			@include paddingWrapperDesktopHD();
+			align-items: center;
+			align-self: flex-start;
+			padding-top: 6rem;
+			padding-bottom: 4rem;
+    }
+    @media #{$desktop}{
+			@include paddingWrapperDesktop();
+			align-items: center;
+			align-self: flex-start;
+			padding-top: 6rem;
+			padding-bottom: 4rem;
+    }
+    @media #{$mobileGeneral}{
+      @include paddingWrapperMobile();
+    }
+	}
+	
+	& ul li {
+		list-style-type: none;
+	}
+}
+
+.col {
+	& .b {
+		& > .wrapper {
+			& > div {
+				width: 25rem;
+			}
+		}
+	}
+}
+
+section {
+  &.intro {
+		height: 100%;
+		& > .wrapper {
+			padding-top: 0;
+			& > * {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-grow: 1;
+				flex-shrink: 0;
+				flex-basis: 40%;
+				height: 100%;
+				&:first-child {
+					justify-content: flex-start;
+				}
+				&:last-child {
+					flex-basis: 10%;
+					align-items: flex-end;
+					justify-content: flex-end;
+				}
+			}
+		}
+		& .profile {
+			& > .wrapper {
+				display: flex;
+				justify-content: flex-end;
+				& > div {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					margin-top: 1rem;
+				}
+			}
+		}
+  }
+}
+
+section {
+	&.summary {
+		& > .wrapper {
+			flex-wrap: wrap;
+			& > div {
+				flex: 1 0 50%;
+				&:last-child {
+					flex: 1 0 100%;
+					& > .wrapper {
+						display: flex;
+						padding-top: 4rem;
+						& > div {
+							flex: 1 0 33.3%;
+							& > .wrapper {
+								padding: 0 1rem;
+							}
+						}
+					}
+				}
+
+				& p {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+
+		& .b {
+			& > .wrapper {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				& > div {
+					margin-bottom: 3rem;
+				}
+			}
+		}
+	}
+}
+
+section {
+	&.skills {
+		&.col-2 {
+			& > .wrapper {
+				align-items: flex-start;
+				overflow: hidden;
+				position: relative;
+				&::after {
+					content: '';
+					width: 1px;
+					height: 100%;
+					background: rgba(255,255,255,0.3);
+					position: absolute;
+					right: 50%;
+				}
+				& > div {
+					&:first-child {
+						& ul {
+							padding-right: 5rem;
+						}
+					}
+					&:last-child {
+						& ul {
+							padding-left: 5rem;
+						}
+					}
+				}
+			}
+		}
+		p {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+section {
+	&.experiences {
+		// year
+		.year {
+			& > * {
+				color: #d8d8d8;
+				font-weight: 100;
+			}
+		}
+	}	
+}
+
+.list {
+	& > li {
+		margin-bottom: 2rem;
+	}
+}
+
+// li detail dash
+.detail {
+	& li {
+		margin-top: 0.5rem;
+		&:before {
+			content: '-';
+			margin-right: 0.25rem;
+		}
+	}
+}
+
+section {
+	&.portfolio {
+		& .col-3.projects {
+			height: 300px;
+			& > .wrapper {
+				flex-direction: column;
+				flex-wrap: wrap;
+				height: 100%;
+				& > div {
+					flex-basis: 33.3%;
+					width: 60%;
+					& > .wrapper {
+						padding-left: 2rem;
+						padding-right: 0;
+					}
+					&:first-child {
+						flex-basis: 100%;
+						width: 40%;
+						& > .wrapper {
+							padding-left: 0;
+							padding-right: 2rem;
+						}
+					}
+					&:last-child {
+						display: flex;
+						align-items: flex-end;
+					}
+				}
+			}
+		}
+
+		& .list {
+			& > li {
+				margin-bottom: 4rem;
+			}
+		}
+
+		& .thumbnail {
+			border-radius: 8px;
+			overflow: hidden;
+			position: relative;
+			& img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.profile {
+	& .photo {
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+		margin-bottom: 1.5rem;
+		overflow: hidden;
+		position: relative;
+		& img {
+			@include centerImage(true)
+		}
+	}
+
+	& li {
+		list-style: none;
+		margin-bottom: 1rem;
+	}
+}
+
+.social {
+	& a {
+		text-decoration: none;
+	}
+	& .icon {
+		font-size: 2.5rem;
+	}
+
+	& li {
+		display: flex;
+		margin-bottom: 1rem;
+		& span {
+			align-items: center;
+			align-self: center;
+		}
+		&:last-child {
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+.assessments {
+	border: 1px solid #fff;
+	border-radius: 0.5rem;
+	display: inline-block;
+	padding: 0.8rem 1.6rem;
+}
+
+.button {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 0.5rem;
+	display: inline-block;
+	&.default {
+		padding: 1rem 3rem
+	}
+
+	&.white {
+		background: none;
+		border-color: #fff;
+		color: #fff;
+		transition: all 0.5s ease;
+		&:hover {
+			background: #fff;
+			color: #000;
+			transition: all 0.5s ease;
+		}
+	}
+}
+
+footer {
+	& > .wrapper {
+		& > div {
+			border-top: 1px solid rgba(255,255,255,0.3);
+			padding-top: 2rem;
+			text-align: center;
+			& p {
+				margin-bottom: 0.5rem;
+			}
+
+			& .icon-love {
+				margin: 0 0.25rem;
+				line-height: 1rem;
+			}
+		}
+	}
+}
