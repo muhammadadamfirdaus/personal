@@ -1,9 +1,11 @@
 import "../css/App.scss";
 import React from "react";
+import Header from "../components/Header";
 
 const About = () => {
 	return (
 		<>
+			<Header />
 			<section className="col intro">
 				<div className="wrapper">
 					<h1>About Me</h1>

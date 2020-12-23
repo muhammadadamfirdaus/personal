@@ -1,6 +1,7 @@
 import "../css/App.scss";
 import React from "react";
 import { motion } from "framer-motion";
+import Header from "../components/Header";
 
 const Home = () => {
 	const descH1 = {
@@ -31,7 +32,7 @@ const Home = () => {
 
 	return (
 		<>
-			<header></header>
+			<Header />
 			<section className="col intro">
 				<div className="wrapper">
 					<div className="b desc">

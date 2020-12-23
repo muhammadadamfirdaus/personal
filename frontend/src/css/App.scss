@@ -430,6 +430,27 @@ body {
 // 	height: 100%;
 // }
 
+header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	& > .wrapper {
+		padding: 1rem 2rem;
+		justify-content: flex-end;
+		& nav {
+			& a {
+				text-decoration: none;
+			}
+			& span {
+				font-size: 0.813rem;
+				letter-spacing: 0.25rem;
+				margin-right: 3rem;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
 section,
 footer {
 	// background: radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%);
@@ -438,7 +459,10 @@ footer {
 	background: -webkit-radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
+section,
+footer {
   & > .wrapper {
 		height: 100%;
     @media #{$desktopFullHD}{
