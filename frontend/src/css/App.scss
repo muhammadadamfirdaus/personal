@@ -345,15 +345,29 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 4.5rem;
-  font-weight: 900;
-  line-height: 4.5rem;
+	@media #{$desktopGeneral}{
+		font-size: 4.5rem;
+		font-weight: 900;
+		line-height: 4.5rem;
+	}
+	@media #{$mobileGeneral}{
+		font-size: 3.5rem;
+		font-weight: 900;
+		line-height: 3.5rem;
+	}
 }
 
 h2 {
-	font-size: 3rem;
-	font-weight: 700;
-	line-height: 2.5rem;
+	@media #{$desktopGeneral}{
+		font-size: 3rem;
+		font-weight: 700;
+		line-height: 2.5rem;
+	}
+	@media #{$mobileGeneral}{
+		font-size: 2.5rem;
+		font-weight: 900;
+		line-height: 2.5rem;
+	}
 }
 
 h3 {
@@ -480,12 +494,16 @@ footer {
 			padding-bottom: 4rem;
     }
     @media #{$mobileGeneral}{
-      @include paddingWrapperMobile();
+			@include paddingWrapperMobile();
     }
 	}
 	
 	& ul li {
 		list-style-type: none;
+	}
+
+	& img {
+		width: 100%;
 	}
 }
 
@@ -493,9 +511,17 @@ footer {
 	& .b {
 		& > .wrapper {
 			& > div {
-				width: 25rem;
+				@media #{$desktopGeneral} {
+					width: 25rem;
+				}
 			}
 		}
+	}
+}
+
+.wrapper {
+	@media #{$mobileGeneral} {
+		flex-direction: column;
 	}
 }
 
@@ -646,8 +672,10 @@ section {
 			height: 300px;
 			& > .wrapper {
 				flex-direction: column;
-				flex-wrap: wrap;
 				height: 100%;
+				@media #{$desktopGeneral}{
+					flex-wrap: wrap;
+				}
 				& > div {
 					flex-basis: 33.3%;
 					width: 60%;
