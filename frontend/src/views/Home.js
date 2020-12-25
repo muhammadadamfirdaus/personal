@@ -2,6 +2,7 @@ import "../css/App.scss";
 import React from "react";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Home = () => {
 	const descH1 = {
@@ -32,7 +33,7 @@ const Home = () => {
 
 	return (
 		<>
-			<div className="home">
+			<div className="app home">
 				<Header />
 				<section className="col intro">
 					<div className="wrapper">
@@ -608,16 +609,7 @@ const Home = () => {
 						</ul>
 					</div>
 				</section>
-				<footer>
-					<div className="wrapper">
-						<div>
-							<p>
-								Made with <span className="icon icon-love"></span> in Cinere.
-							</p>
-							<p>Copyright &copy; {year}. All rights reserved.</p>
-						</div>
-					</div>
-				</footer>
+				<Footer copyright={year} />
 			</div>
 		</>
 	);

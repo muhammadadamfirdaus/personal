@@ -436,18 +436,24 @@ body {
 }
 
 #root,
-.App {
+.app {
 	height: 100%;
 }
 
-// .App section {
-// 	height: 100%;
-// }
-
 header {
-	position: absolute;
-	top: 0;
-	width: 100%;
+	@media #{$desktopGeneral}{
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	@media #{$mobileGeneral}{
+		// background: radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%);
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+80&0.75+1,1+100 */
+		background: -moz-radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%); /* FF3.6-15 */
+		background: -webkit-radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: radial-gradient(50% 128% at 50% 50%, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.88) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
 	& > .wrapper {
 		padding: 1rem 2rem;
 		justify-content: flex-end;
@@ -525,6 +531,14 @@ footer {
 	}
 }
 
+.about {
+	& .intro {
+		& > .wrapper {
+			flex-direction: column;
+		}
+	}
+}
+
 section {
   &.intro {
 		height: 100%;
@@ -536,15 +550,17 @@ section {
 				justify-content: center;
 				flex-grow: 1;
 				flex-shrink: 0;
-				flex-basis: 40%;
-				height: 100%;
-				&:first-child {
-					justify-content: flex-start;
-				}
-				&:last-child {
-					flex-basis: 10%;
-					align-items: flex-end;
-					justify-content: flex-end;
+				@media #{$desktopGeneral}{
+					flex-basis: 40%;
+					height: 100%;
+					&:first-child {
+						justify-content: flex-start;
+					}
+					&:last-child {
+						flex-basis: 10%;
+						align-items: flex-end;
+						justify-content: flex-end;
+					}
 				}
 			}
 		}
@@ -557,6 +573,18 @@ section {
 					flex-direction: column;
 					align-items: center;
 					margin-top: 1rem;
+				}
+			}
+		}
+
+		@media #{$mobileGeneral}{
+			& .social {
+				display: flex;
+				& li {
+					margin-right: 1rem;
+					&:last-child {
+						margin-right: 0;
+					}
 				}
 			}
 		}
@@ -609,23 +637,25 @@ section {
 				align-items: flex-start;
 				overflow: hidden;
 				position: relative;
-				&::after {
-					content: '';
-					width: 1px;
-					height: 100%;
-					background: rgba(255,255,255,0.3);
-					position: absolute;
-					right: 50%;
-				}
-				& > div {
-					&:first-child {
-						& ul {
-							padding-right: 5rem;
-						}
+				@media #{$desktopGeneral}{
+					&::after {
+						content: '';
+						width: 1px;
+						height: 100%;
+						background: rgba(255,255,255,0.3);
+						position: absolute;
+						right: 50%;
 					}
-					&:last-child {
-						& ul {
-							padding-left: 5rem;
+					& > div {
+						&:first-child {
+							& ul {
+								padding-right: 5rem;
+							}
+						}
+						&:last-child {
+							& ul {
+								padding-left: 5rem;
+							}
 						}
 					}
 				}
@@ -669,7 +699,9 @@ section {
 section {
 	&.portfolio {
 		& .col-3.projects {
-			height: 300px;
+			@media #{$desktopGeneral}{
+				height: 300px;
+			}
 			& > .wrapper {
 				flex-direction: column;
 				height: 100%;
@@ -678,14 +710,21 @@ section {
 				}
 				& > div {
 					flex-basis: 33.3%;
-					width: 60%;
-					& > .wrapper {
-						padding-left: 2rem;
-						padding-right: 0;
+					@media #{$desktopGeneral}{
+						width: 60%;	
+						& > .wrapper {
+							padding-left: 2rem;
+							padding-right: 0;
+						}
 					}
 					&:first-child {
 						flex-basis: 100%;
-						width: 40%;
+						@media #{$desktopGeneral}{
+							width: 40%;
+						}
+						@media #{$mobileGeneral}{
+							margin-bottom: 1rem;
+						}
 						& > .wrapper {
 							padding-left: 0;
 							padding-right: 2rem;

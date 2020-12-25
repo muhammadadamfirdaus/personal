@@ -1,11 +1,14 @@
 import "../css/App.scss";
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const About = () => {
+	const year = new Date().getFullYear();
+
 	return (
 		<>
-			<div className="about">
+			<div className="app about">
 				<Header />
 				<section className="col intro">
 					<div className="wrapper">
@@ -45,6 +48,7 @@ const About = () => {
 						</p>
 					</div>
 				</section>
+				<Footer copyright={year} />
 			</div>
 		</>
 	);

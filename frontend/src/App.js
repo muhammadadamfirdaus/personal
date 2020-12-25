@@ -6,12 +6,10 @@ import "./css/App.scss";
 function App() {
 	return (
 		<Router>
-			<div className="App">
-				<Switch>
-					<Route path="/" component={Home} exact />
-					<Route path="/about" component={About} exact />
-				</Switch>
-			</div>
+			<Switch>
+				<Route path="/" component={Home} exact />
+				<Route path="/about" component={About} exact />
+			</Switch>
 		</Router>
 	);
 }
