@@ -29,8 +29,8 @@ Muhammad Adam Firdaus Dec 2020
 
 // padding
 @mixin paddingWrapperDesktopHD {
-  padding-left: 16.8rem;
-  padding-right: 16.8rem;
+  padding-left: 23.8rem;
+  padding-right: 23.8rem;
 }
 
 @mixin paddingWrapperDesktop {
@@ -648,12 +648,12 @@ section {
 					}
 					& > div {
 						&:first-child {
-							& ul {
+							& > .wrapper {
 								padding-right: 5rem;
 							}
 						}
 						&:last-child {
-							& ul {
+							& > .wrapper {
 								padding-left: 5rem;
 							}
 						}

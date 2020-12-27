@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import skills from "../data/skills";
 
 const Home = () => {
 	const descH1 = {
@@ -31,6 +32,17 @@ const Home = () => {
 	const year = new Date().getFullYear();
 	const yearFrontEnd = Number(year - 2015);
 
+	// get design skill
+	const skillDesign = skills
+		.filter(({ category }) => category === "design")
+		.sort((a, b) => a.id - b.id);
+
+	// get coding skill
+	const skillCoding = skills
+		.filter(({ category }) => category === "code")
+		.sort((a, b) => a.id - b.id);
+
+	console.log(skillCoding);
 	return (
 		<>
 			<div className="app home">
@@ -77,11 +89,6 @@ const Home = () => {
 									animate="visible"
 									variants={social}
 								>
-									{/* <span>
-									<a href="!#" target="blank">
-										adam@muhammadadamfirdaus.com
-									</a>
-								</span> */}
 									<a href="mailto:adam@muhammadadamfirdaus.com">
 										<span className="icon icon-email"></span>
 									</a>
@@ -92,11 +99,6 @@ const Home = () => {
 									animate="visible"
 									variants={social}
 								>
-									{/* <span>
-									<a href="!#" target="blank">
-										adam@muhammadadamfirdaus.com
-									</a>
-								</span> */}
 									<a
 										href="https://www.behance.net/muhammadadamfirdaus"
 										target="blank"
@@ -110,11 +112,6 @@ const Home = () => {
 									animate="visible"
 									variants={social}
 								>
-									{/* <span>
-									<a href="!#" target="blank">
-										adam@muhammadadamfirdaus.com
-									</a>
-								</span> */}
 									<a
 										href="https://github.com/muhammadadamfirdaus"
 										target="blank"
@@ -128,11 +125,6 @@ const Home = () => {
 									animate="visible"
 									variants={social}
 								>
-									{/* <span>
-									<a href="!#" target="blank">
-										adam@muhammadadamfirdaus.com
-									</a>
-								</span> */}
 									<a
 										href="https://www.linkedin.com/in/muhammadadamfirdaus/"
 										target="blank"
@@ -146,11 +138,6 @@ const Home = () => {
 									animate="visible"
 									variants={social}
 								>
-									{/* <span>
-									<a href="!#" target="blank">
-										id_adam
-									</a>
-								</span> */}
 									<a href="https://twitter.com/id_adam" target="blank">
 										<span className="icon icon-twitter"></span>
 									</a>
@@ -249,123 +236,60 @@ const Home = () => {
 				<section className="col col-2 skills">
 					<div className="wrapper">
 						<div>
-							<ul className="list">
+							<div className="wrapper">
 								<h2>Design</h2>
-								<li>
-									<h3>Sketch</h3>
-									<p>
-										Currently, this is my lovely tool for designing user
-										interfaces since I'm switching to the Apple ecosystem.
-										Mostly for user interfaces I’m using this software. This app
-										five so much flexibility for my needs.
-									</p>
-								</li>
-								<li>
-									<h3>Adobe Photoshop</h3>
-									<p>
-										Fundamental tools among designers. The legendary software
-										for creating every aspect of your lives.
-									</p>
-								</li>
-								<li>
-									<h3>Adobe Illustrator</h3>
-									<p>
-										When clients need a logo, this is my best friend. Most of
-										vector based, I used it for creating icons and svg.
-									</p>
-								</li>
-								<li>
-									<h3>Figma</h3>
-									<p>
-										An alternative for my Windows teammate. I think this is
-										going to replace my Sketch soon.
-									</p>
-								</li>
-								<li>
-									<h3>Adobe XD</h3>
-									<p>
-										Lightweight UI that I loved. Only essentials, no need
-										unnecessary toolbar, simple.
-									</p>
-								</li>
-								<li>
-									<h3>Principle</h3>
-									<p>
-										Nice tool for creating a beautiful animations for user
-										interfaces. Seamlessly with Sketch that I’m using.
-									</p>
-								</li>
-							</ul>
+								<ul className="list">
+									{skillDesign.map((d) => (
+										<li key={d.id}>
+											<h3>{d.title}</h3>
+											<p>{d.description}</p>
+											{d.assessment ? (
+												<div className="assessments">
+													<span className="icon icon-clipboard"></span>
+													<span>
+														<a
+															href="https://www.linkedin.com/in/muhammadadamfirdaus/detail/skills/(ACoAABdRv98BirGK39QzdXCCEOLM2K3v3Ut_YVo,2)/"
+															target="blank"
+														>
+															LinkedIn Skill Assessment badge
+														</a>
+													</span>
+												</div>
+											) : (
+												""
+											)}
+										</li>
+									))}
+								</ul>
+							</div>
 						</div>
 						<div>
-							<ul className="list">
+							<div className="wrapper">
 								<h2>Code</h2>
-								<li>
-									<h3>CSS</h3>
-									<p>
-										Before pre-processor are existed, I just styling my web
-										through css. I live before grid was born, even flexbox.
-										Centering things with table, then floating them left or
-										right, it’s much pain than waiting uncertainty.
-									</p>
-									<div className="assessments">
-										<span className="icon icon-clipboard"></span>
-										<span>
-											<a
-												href="https://www.linkedin.com/in/muhammadadamfirdaus/detail/skills/(ACoAABdRv98BirGK39QzdXCCEOLM2K3v3Ut_YVo,2)/"
-												target="blank"
-											>
-												LinkedIn Skill Assessment badge
-											</a>
-										</span>
-									</div>
-								</li>
-								<li>
-									<h3>SASS</h3>
-									<p>
-										Currently, I'm using this for styling. SASS makes me writing
-										css fast without repeating unnecessary things.
-									</p>
-								</li>
-								<li>
-									<h3>JavaScript</h3>
-									<p>
-										Currently, most of my code is using ES6 standard. I’m sorry
-										for jQuery.
-									</p>
-								</li>
-								<li>
-									<h3>jQuery</h3>
-									<p>Who is still using jQuery nowadays? I am.</p>
-									<div className="assessments">
-										<span className="icon icon-clipboard"></span>
-										<span>
-											<a
-												href="https://www.linkedin.com/in/muhammadadamfirdaus/detail/skills/(ACoAABdRv98BirGK39QzdXCCEOLM2K3v3Ut_YVo,3)/"
-												target="blank"
-											>
-												LinkedIn Skill Assessment badge
-											</a>
-										</span>
-									</div>
-								</li>
-								<li>
-									<h3>Bootstrap</h3>
-									<p>
-										Sometimes, I no need this. I started building accordion,
-										modal, popup and many other things from stracth. Then I
-										realized, it’s too wasting my time for few money.
-									</p>
-								</li>
-								<li>
-									<h3>React</h3>
-									<p>
-										I’m ready to replacing my frontend stacks with this.
-										Combined with NextJS, I no need spent too much for basics
-										things.
-									</p>
-								</li>
-							</ul>
+								<ul className="list">
+									{skillCoding.map((c) => (
+										<li key={c.id}>
+											<h3>{c.title}</h3>
+											<p>{c.description}</p>
+											{c.assessment === true ? (
+												<div className="assessments">
+													<span className="icon icon-clipboard"></span>
+													<span>
+														<a
+															href="https://www.linkedin.com/in/muhammadadamfirdaus/detail/skills/(ACoAABdRv98BirGK39QzdXCCEOLM2K3v3Ut_YVo,2)/"
+															target="blank"
+														>
+															LinkedIn Skill Assessment badge
+														</a>
+													</span>
+												</div>
+											) : (
+												""
+											)}
+										</li>
+									))}
+								</ul>
+							</div>
 						</div>
 					</div>
 				</section>
