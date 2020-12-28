@@ -1,11 +1,14 @@
 import "../css/App.scss";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import skills from "../data/skills";
 
 const Home = () => {
+	const animation = useAnimation();
+	const [ref, inView] = useInView({ threshold: 0.1 });
 	const descH1 = {
 		hidden: {
 			opacity: 0,
@@ -28,6 +31,38 @@ const Home = () => {
 			x: 0,
 		}),
 	};
+
+	const leftToRight = {
+		hidden: {
+			x: -100,
+			opacity: 0,
+		},
+		visible: {
+			x: 0,
+			opacity: 1,
+			transition: { duration: 1 },
+		},
+	};
+
+	const rightToLeft = {
+		hidden: {
+			x: 100,
+			opacity: 0,
+		},
+		visible: {
+			x: 0,
+			opacity: 1,
+			transition: { duration: 1 },
+		},
+	};
+
+	useEffect(() => {
+		if (inView) {
+			animation.start("visible");
+		} else {
+			animation.start("hidden");
+		}
+	}, [animation, inView]);
 
 	const year = new Date().getFullYear();
 	const yearFrontEnd = Number(year - 2015);
@@ -150,9 +185,24 @@ const Home = () => {
 					<div className="wrapper">
 						<div>
 							<div className="wrapper">
-								<div>
-									<img src="images/code.png" alt="" />
-								</div>
+								<figure>
+									<motion.div
+										className="code"
+										ref={ref}
+										animate={animation}
+										variants={rightToLeft}
+									>
+										<img src="images/code-1.png" alt="" />
+									</motion.div>
+									<motion.div
+										className="code"
+										ref={ref}
+										animate={animation}
+										variants={leftToRight}
+									>
+										<img src="images/code-2.png" alt="" />
+									</motion.div>
+								</figure>
 							</div>
 						</div>
 						<div className="b">

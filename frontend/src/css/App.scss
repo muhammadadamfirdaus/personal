@@ -539,6 +539,29 @@ footer {
 	}
 }
 
+.home {
+	& section {
+		&.intro {
+			& > .wrapper {
+				& > * {
+					@media #{$desktopGeneral}{
+						flex-basis: 40%;
+						height: 100%;
+						&:first-child {
+							justify-content: flex-start;
+						}
+						&:last-child {
+							flex-basis: 10%;
+							align-items: flex-end;
+							justify-content: flex-end;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 section {
   &.intro {
 		height: 100%;
@@ -550,18 +573,6 @@ section {
 				justify-content: center;
 				flex-grow: 1;
 				flex-shrink: 0;
-				@media #{$desktopGeneral}{
-					flex-basis: 40%;
-					height: 100%;
-					&:first-child {
-						justify-content: flex-start;
-					}
-					&:last-child {
-						flex-basis: 10%;
-						align-items: flex-end;
-						justify-content: flex-end;
-					}
-				}
 			}
 		}
 		& .profile {
@@ -614,6 +625,24 @@ section {
 				& p {
 					margin-bottom: 1rem;
 				}
+			}
+		}
+
+		& figure {
+			height: 30rem;
+			position: relative;
+		}
+
+		& .code {
+			position: absolute;
+			z-index: 1;
+			&:nth-child(2) {
+				right: 0;
+				bottom: 3rem;
+				z-index: 0;
+			}
+			& img {
+				border-radius: 8px;
 			}
 		}
 
