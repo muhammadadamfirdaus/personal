@@ -89,7 +89,7 @@ const skills = [
 	{
 		id: 11,
 		category: "code",
-		title: "JavaScript",
+		title: "ReactJS",
 		description:
 			"I’m ready to replacing my frontend stacks with this. Combined with NextJS, I no need spent too much for basics things.",
 		assessment: false,

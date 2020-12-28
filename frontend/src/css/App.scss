@@ -543,6 +543,7 @@ footer {
 	& section {
 		&.intro {
 			& > .wrapper {
+				padding-top: 0;
 				& > * {
 					@media #{$desktopGeneral}{
 						flex-basis: 40%;
@@ -566,13 +567,12 @@ section {
   &.intro {
 		height: 100%;
 		& > .wrapper {
-			padding-top: 0;
+			padding-top: 3.5rem;
+			padding-bottom: 0;
 			& > * {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				flex-grow: 1;
-				flex-shrink: 0;
 			}
 		}
 		& .profile {
@@ -606,6 +606,7 @@ section {
 	&.summary {
 		& > .wrapper {
 			flex-wrap: wrap;
+			overflow: hidden;
 			& > div {
 				flex: 1 0 50%;
 				&:last-child {
