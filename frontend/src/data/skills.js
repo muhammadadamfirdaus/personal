@@ -68,7 +68,7 @@ const skills = [
 		title: "Adobe XD",
 		description:
 			"Lightweight UI that I loved. Only essentials, no need unnecessary toolbar, simple.",
-		assessment: true,
+		assessment: false,
 	},
 	{
 		id: 9,

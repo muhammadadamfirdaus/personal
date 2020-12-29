@@ -307,6 +307,7 @@ footer, header, hgroup, section {
 }
 
 html, body {
+	height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -402,14 +403,10 @@ table {
   border-spacing: 0;
 }
 
-.container {
-  height: 100%;
-  position: relative;
-}
-
-html,
-body {
-  height: 100%;
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 /*.preload {
@@ -435,9 +432,15 @@ body {
   }
 }
 
-#root,
-.app {
-	height: 100%;
+
+#root {
+	position: relative;
+	min-height: 100%;
+	& > .content {
+		& > .wrapper {
+			padding-bottom: 17.875rem;
+		}
+	}
 }
 
 header {
@@ -542,6 +545,7 @@ footer {
 .home {
 	& section {
 		&.intro {
+			height: 100vh;
 			& > .wrapper {
 				padding-top: 0;
 				& > * {
@@ -565,10 +569,8 @@ footer {
 
 section {
   &.intro {
-		height: 100%;
 		& > .wrapper {
 			padding-top: 3.5rem;
-			padding-bottom: 0;
 			& > * {
 				display: flex;
 				align-items: center;
