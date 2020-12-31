@@ -1,4 +1,3 @@
-import "../css/App.scss";
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";

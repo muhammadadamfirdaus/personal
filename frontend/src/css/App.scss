@@ -341,8 +341,14 @@ code {
 }
 
 h1, h2, h3, h4 {
-	color: #fff;
 	margin-bottom: 1rem;
+}
+
+.home h1,
+.home h2,
+.home h3,
+.home h4 {
+	color: #fff;
 }
 
 h1 {
@@ -484,6 +490,7 @@ footer {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+.blog,
 section,
 footer {
   & > .wrapper {
