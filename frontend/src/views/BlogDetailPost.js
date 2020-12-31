@@ -12,11 +12,21 @@ const BlogDetailPost = ({ match }) => {
 			<div className="content blog detail">
 				<div className="wrapper">
 					<div>
-						<h1>Detail Post</h1>
+						<h2>{detailPost.title}</h2>
+						<span>
+							{detailPost.time_published
+								.slice(0, 10)
+								.split("-")
+								.reverse()
+								.join("-")}
+						</span>
+						<article>
+							<p>{detailPost.body}</p>
+						</article>
 					</div>
 					<aside>
 						<div className="widget">
-							<div className="wrapper">y</div>
+							<div className="wrapper"></div>
 						</div>
 					</aside>
 				</div>

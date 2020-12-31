@@ -16,7 +16,13 @@ const Blog = () => {
 						{recentPosts.map((x) => (
 							<li key={x.id}>
 								<h3>
-									<Link to={`/blog/${x.id}`}>{x.title}</Link>
+									<Link
+										to={`/blog/${x.id}/${x.title
+											.replace(/[\W_]+/g, "-")
+											.toLowerCase()}`}
+									>
+										{x.title}
+									</Link>
 								</h3>
 								<span>
 									{x.time_published.slice(0, 10).split("-").reverse().join("-")}
@@ -27,7 +33,7 @@ const Blog = () => {
 					</ul>
 					<aside>
 						<div className="widget">
-							<div className="wrapper">y</div>
+							<div className="wrapper"></div>
 						</div>
 					</aside>
 				</div>
