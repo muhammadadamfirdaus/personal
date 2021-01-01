@@ -344,10 +344,10 @@ h1, h2, h3, h4 {
 	margin-bottom: 1rem;
 }
 
-.home h1,
-.home h2,
-.home h3,
-.home h4 {
+h1,
+h2,
+h3,
+h4 {
 	color: #fff;
 }
 
@@ -438,7 +438,6 @@ footer {
   }
 }
 
-
 #root {
 	position: relative;
 	min-height: 100%;
@@ -447,6 +446,58 @@ footer {
 			& > .wrapper {
 				padding-bottom: 17.875rem;
 			}
+		}
+	}
+}
+
+.blog {
+	& a {
+		color: #2979ff;
+	}
+	& h1,
+	& h2,
+	& h3,
+	& h4 {
+		color: #000;
+	}
+
+	& p {
+		color: #777;
+	}
+
+	& footer {
+		background: none;
+		& > .wrapper {
+			& > div {
+				border-top-color: rgba(0,0,0,0.1);
+			}
+		}
+	}
+}
+
+.blog {
+	& .col-3 {
+		& > .wrapper {
+			flex-wrap: wrap;
+			& > div {
+				flex-grow: 1;
+				flex-basis: 70%;
+				order: 2;
+			}
+
+			& > aside {
+				flex-grow: 1;
+				flex-basis: 15%;
+				&:last-child{
+					order: 3;
+				}
+			}
+		}
+	}
+
+	& article {
+		& img {
+			border-radius: 1rem;
 		}
 	}
 }
@@ -499,15 +550,11 @@ footer {
 		height: 100%;
     @media #{$desktopFullHD}{
 			@include paddingWrapperDesktopHD();
-			align-items: center;
-			align-self: flex-start;
 			padding-top: 6rem;
 			padding-bottom: 4rem;
     }
     @media #{$desktop}{
 			@include paddingWrapperDesktop();
-			align-items: center;
-			align-self: flex-start;
 			padding-top: 6rem;
 			padding-bottom: 4rem;
     }
@@ -522,6 +569,20 @@ footer {
 
 	& img {
 		width: 100%;
+	}
+}
+
+section,
+footer {
+	& > .wrapper {
+		@media #{$desktopFullHD}{
+			align-items: center;
+			align-self: flex-start;
+    }
+    @media #{$desktop}{
+			align-items: center;
+			align-self: flex-start;
+    }
 	}
 }
 
@@ -868,7 +929,9 @@ section {
 footer {
 	& > .wrapper {
 		& > div {
-			border-top: 1px solid rgba(255,255,255,0.3);
+			border-top-color: rgba(255,255,255,0.3);
+			border-top-style: solid;
+			border-top-width: 1px;
 			padding-top: 2rem;
 			text-align: center;
 			& p {
