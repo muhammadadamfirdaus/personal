@@ -442,9 +442,11 @@ footer {
 #root {
 	position: relative;
 	min-height: 100%;
-	& > .content {
-		& > .wrapper {
-			padding-bottom: 17.875rem;
+	& .App {
+		& > .content {
+			& > .wrapper {
+				padding-bottom: 17.875rem;
+			}
 		}
 	}
 }
@@ -490,7 +492,7 @@ footer {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.blog,
+.blog .content,
 section,
 footer {
   & > .wrapper {
