@@ -11,22 +11,26 @@ const BlogDetailPost = ({ match }) => {
 
 	const pageTransition = {
 		hidden: {
-			scale: 0,
+			opacity: 0,
+			// scale: 0,
+			y: -50,
 			// width: 0,
 		},
 		visible: {
-			scale: 1,
-			width: "100%",
+			opacity: 1,
+			// scale: 1,
+			y: 0,
 			transition: {
 				duration: 0.5,
 				ease: [0.6, 0.01, -0.05, 0.9],
 			},
 		},
 		exit: {
-			scale: 0,
+			opacity: 0,
+			y: 200,
 			transition: {
-				duration: 0.5,
-				ease: [0.43, 0.13, 0.23, 0.96],
+				duration: 1,
+				ease: [0.6, 0.01, -0.05, 0.9],
 			},
 		},
 	};
