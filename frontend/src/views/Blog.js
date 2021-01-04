@@ -42,7 +42,7 @@ const Blog = () => {
 				<Header />
 				<div className="content col col-2">
 					<div className="wrapper">
-						<ul className="list">
+						<div>
 							{recentPosts.map((x) => (
 								<Link
 									to={`/blog/${x.id}/${x.title
@@ -51,7 +51,7 @@ const Blog = () => {
 									key={x.id}
 									style={{ textDecoration: "none" }}
 								>
-									<motion.li
+									<motion.article
 										initial="hidden"
 										animate="visible"
 										exit="exit"
@@ -70,10 +70,10 @@ const Blog = () => {
 											</span>
 											<p>{x.description}</p>
 										</div>
-									</motion.li>
+									</motion.article>
 								</Link>
 							))}
-						</ul>
+						</div>
 						<aside>
 							<div className="widget">
 								<div className="wrapper"></div>

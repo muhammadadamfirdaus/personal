@@ -46,12 +46,12 @@ const BlogDetailPost = ({ match }) => {
 					variants={pageTransition}
 				>
 					<div className="wrapper">
-						<ul>
-							<Link to="/blog/">
-								<span>Kembali</span>
-							</Link>
-							<li>
+						<div>
+							<article>
 								<div className="wrapper">
+									<Link to="/blog/">
+										<span>Kembali</span>
+									</Link>
 									<h2>{detailPost.title}</h2>
 									<span>
 										Ditulis pada:{" "}
@@ -63,12 +63,17 @@ const BlogDetailPost = ({ match }) => {
 										, pukul {detailPost.time_published.slice(14, 19)} WIB.
 									</span>
 									<span>Oleh: {detailPost.author}</span>
-									<article
+									<div
 										dangerouslySetInnerHTML={{ __html: detailPost.body }}
-									></article>
+									></div>
 								</div>
-							</li>
-						</ul>
+							</article>
+						</div>
+						<aside>
+							<div className="widget">
+								<div className="wrapper">x</div>
+							</div>
+						</aside>
 						<aside>
 							<div className="widget">
 								<div className="wrapper">x</div>
