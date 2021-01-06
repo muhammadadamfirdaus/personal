@@ -462,6 +462,149 @@ const Home = () => {
 									<h2>Portfolio</h2>
 									<li>
 										<ul>
+											<h3>XSHOP</h3>
+											<li className="col col-3 projects">
+												<div className="wrapper">
+													<div className="thumbnail">
+														<a
+															href="https://github.com/muhammadadamfirdaus/xshop"
+															target="blank"
+														>
+															<img
+																src="images/projects/xshop.png"
+																alt="XSHOP"
+															/>
+														</a>
+													</div>
+													<div>
+														<div className="wrapper">
+															<p>
+																XSHOP is my side project built in MERN Stack.
+															</p>
+															<p>
+																This mini e-commerce is my place for practice
+																current technologies especially for React.
+															</p>
+															<p>
+																XSHOP covered basic functionality of e-commerce
+																like order and delete items.
+															</p>
+														</div>
+													</div>
+													<div>
+														<div className="wrapper">
+															<a
+																href="https://github.com/muhammadadamfirdaus/xshop"
+																target="blank"
+																className="button default white"
+															>
+																Learn More
+															</a>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<h3>Indonesiana</h3>
+											<li className="col col-3 projects">
+												<div className="wrapper">
+													<div className="thumbnail">
+														<a
+															href="https://www.indonesiana.id/"
+															target="blank"
+														>
+															<img
+																src="images/projects/indonesiana.png"
+																alt="Indonesiana"
+															/>
+														</a>
+													</div>
+													<div>
+														<div className="wrapper">
+															<p>
+																Indonesiana is UGC platform. Underneath TEMPO,
+																Indonesiana is place of public to express their
+																ideas.
+															</p>
+															<p>
+																I focused on creating user interfaces, analyzing
+																user behaviour, create front end components,
+																both desktop and mobile version, then optimizing
+																on the front end side.
+															</p>
+															<p>
+																This project was built on 2018, so we haven't
+																covered with modern Javascript yet. But, I do
+																this project with front end core principles.
+															</p>
+														</div>
+													</div>
+													<div>
+														<div className="wrapper">
+															<a
+																href="https://www.indonesiana.id/"
+																target="blank"
+																className="button default white"
+															>
+																Learn More
+															</a>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<h3>TEMPO.CO</h3>
+											<li className="col col-3 projects">
+												<div className="wrapper">
+													<div className="thumbnail">
+														<a href="https://www.tempo.co/" target="blank">
+															<img
+																src="images/projects/tempo-co.png"
+																alt="TEMPO.CO"
+															/>
+														</a>
+													</div>
+													<div>
+														<div className="wrapper">
+															<p>
+																This is revamping project aiming for better
+																TEMPO.CO site performances.
+															</p>
+															<p>
+																I focused on creating user interfaces, analyzing
+																user behaviour, create front end components,
+																then optimizing on the front end side.
+															</p>
+															<p>
+																This project was built on 2017, so we haven't
+																covered with modern Javascript yet. But, I do
+																this project with front end core principles.
+															</p>
+														</div>
+													</div>
+													<div>
+														<div className="wrapper">
+															<a
+																href="https://www.tempo.co/"
+																target="blank"
+																className="button default white"
+															>
+																Learn More
+															</a>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<ul>
 											<h3>Velospace &amp; Co.</h3>
 											<li className="col col-3 projects">
 												<div className="wrapper">
