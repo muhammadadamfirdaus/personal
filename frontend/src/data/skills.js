@@ -94,6 +94,38 @@ const skills = [
 			"I’m ready to replacing my frontend stacks with this. Combined with NextJS, I no need spent too much for basics things.",
 		assessment: false,
 	},
+	{
+		id: 12,
+		category: "code",
+		title: "Git",
+		description:
+			"It’s daily uses for me, collaborating with other developers, and took a open source projects.",
+		assessment: false,
+	},
+	{
+		id: 13,
+		category: "code",
+		title: "CI/CD",
+		description:
+			"I never touched it before, but in my current project is using this for deploying to the server seamlessly.",
+		assessment: false,
+	},
+	{
+		id: 14,
+		category: "code",
+		title: "Ruby on Rails",
+		description:
+			"Currently, I’m using Ruby for main project. It’s still basic, but I can understand under the hood. Asset pipeline implementations, Rails console, and so on.",
+		assessment: false,
+	},
+	{
+		id: 15,
+		category: "code",
+		title: "Docker",
+		description:
+			"I'm using Docker for running apps while development. Writing Docker command to pull images, run it, also dealing those high consuming memory since Docker taking up so much space in my Mac.",
+		assessment: false,
+	},
 ];
 
 export default skills;
