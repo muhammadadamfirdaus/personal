@@ -107,7 +107,7 @@ const skills = [
 		category: "code",
 		title: "CI/CD",
 		description:
-			"I never touched it before, but in my current project is using this for deploying to the server seamlessly.",
+			"Sometimes I wrote the command by myself for personal purposes. Whenever I've changed it locally, it will be deploying to the server seamlessly.",
 		assessment: false,
 	},
 	{
