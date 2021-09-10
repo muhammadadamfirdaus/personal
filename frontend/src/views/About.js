@@ -15,17 +15,10 @@ const About = () => {
 							<div className="wrapper">
 								<h1>About Me</h1>
 								<p>
-									Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-									Ullam quos magnam dolorum consequuntur quo sint quia beatae
-									quasi distinctio aliquam iusto maxime, ad quas nemo non eaque
-									corrupti explicabo doloribus amet. Eveniet, libero sed,
-									tempora atque architecto deserunt praesentium vero aspernatur
-									ex laboriosam impedit a commodi officiis, deleniti unde
-									tempore. Aliquam vel enim nemo itaque amet, hic voluptatum
-									esse cum accusantium corporis, dolorum exercitationem omnis!
-									Quasi, perspiciatis optio veniam perferendis quos harum rerum
-									natus earum quisquam delectus, consequuntur, neque
-									praesentium!
+									Hello, my name is Adam. Currently living in Jakarta,
+									Indonesia. I am a professional front end developer. My focus
+									is on front of frontend. So I enjoyed converting static mockup
+									from design tools into interactive website.
 								</p>
 								<p>
 									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
