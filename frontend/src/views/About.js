@@ -40,7 +40,8 @@ const About = () => {
 									minima non nihil perspiciatis rerum fuga, debitis aliquid
 									molestiae illum qui unde nesciunt eveniet beatae eos,
 									veritatis odio vitae. Necessitatibus nostrum saepe debitis
-									repudiandae atque.
+									repudiandae atque. Expedita, impedit numquam unde quibusdam
+									beatae eligendi rem qui fugit.
 								</p>
 							</div>
 						</section>
