@@ -39,8 +39,7 @@ const About = () => {
 									Officiis saepe facilis quia id reprehenderit accusantium
 									minima non nihil perspiciatis rerum fuga, debitis aliquid
 									molestiae illum qui unde nesciunt eveniet beatae eos,
-									veritatis odio vitae. Necessitatibus nostrum saepe debitis
-									repudiandae atque. Expedita, impedit numquam unde quibusdam
+									veritatis odio vitae. Expedita, impedit numquam unde quibusdam
 									beatae eligendi rem qui fugit.
 								</p>
 							</div>
