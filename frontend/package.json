@@ -2,6 +2,7 @@
 	"name": "muhammadadamfirdaus",
 	"version": "1.0.0",
 	"homepage": "http://www.muhammadadamfirdaus.com/",
+	"proxy": "http://www.muhammadadamfirdaus.com/blog",
 	"private": true,
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.11.4",

@@ -2,8 +2,8 @@ import "./css/App.scss";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./views/Home";
 import About from "./views/About";
-import Blog from "./views/Blog";
-import BlogDetailPost from "./views/BlogDetailPost";
+import Articles from "./views/Articles";
+import ArticleDetail from "./views/ArticleDetail";
 
 function App() {
 	return (
@@ -11,8 +11,8 @@ function App() {
 			<Switch>
 				<Route path="/" component={Home} exact />
 				<Route path="/about" component={About} exact />
-				<Route path="/blog/" component={Blog} exact />
-				<Route path="/blog/:id" component={BlogDetailPost} />
+				<Route path="/article/" component={Articles} exact />
+				<Route path="/article/:id" component={ArticleDetail} />
 			</Switch>
 		</Router>
 	);

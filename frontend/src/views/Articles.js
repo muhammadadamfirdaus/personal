@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import posts from "../data/posts";
+import useFetch from "../hooks/useFetch";
+// import posts from "../data/posts";
 
-// get latest post
-const recentPosts = posts.sort((a, b) => a.time_published - b.time_published);
 // const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
 const sequence = {
@@ -35,7 +34,17 @@ const sequence = {
 	}),
 };
 
-const Blog = () => {
+const Articles = () => {
+	const posts = useFetch(
+		"http://www.muhammadadamfirdaus.com/blog/wp-json/wp/v2/posts"
+	);
+	// const posts = useFetch(
+	// 	"http://www.muhammadadamfirdaus.com/blog/wp-json/wp/v2/posts"
+	// );
+	// console.log(posts);
+	// get latest post
+	// const recentPosts = posts.sort((a, b) => a.time_published - b.time_published);
+
 	return (
 		<>
 			<div className="App blog">
@@ -43,7 +52,22 @@ const Blog = () => {
 				<div className="content col col-2">
 					<div className="wrapper">
 						<div>
-							{recentPosts.map((x) => (
+							{posts &&
+								posts.map((post) => (
+									<div key={post.id}>
+										<h3>
+											<Link to={`/article/${post.slug}`}>
+												{post.title.rendered}
+											</Link>
+										</h3>
+										<div
+											dangerouslySetInnerHTML={{
+												__html: post.excerpt.rendered,
+											}}
+										/>
+									</div>
+								))}
+							{/* {posts.map((x) => (
 								<Link
 									to={`/blog/${x.id}/${x.title
 										.replace(/[\W_]+/g, "-")
@@ -72,11 +96,11 @@ const Blog = () => {
 										</div>
 									</motion.article>
 								</Link>
-							))}
+							))} */}
 						</div>
 						<aside>
 							<div className="widget">
-								<div className="wrapper"></div>
+								<div className="wrapper">x</div>
 							</div>
 						</aside>
 					</div>
@@ -87,4 +111,4 @@ const Blog = () => {
 	);
 };
 
-export default Blog;
+export default Articles;

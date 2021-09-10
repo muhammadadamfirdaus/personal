@@ -13,7 +13,9 @@ const Header = () => {
 					<Link to={"/about"}>
 						<span>About</span>
 					</Link>
-					<span>Blog</span>
+					<Link to={"/article"}>
+						<span>Blog</span>
+					</Link>
 				</nav>
 			</div>
 		</header>

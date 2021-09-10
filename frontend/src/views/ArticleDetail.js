@@ -3,10 +3,21 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import posts from "../data/posts";
+import useFetch from "../hooks/useFetch";
 
-const BlogDetailPost = ({ match }) => {
-	const detailPost = posts.find((p) => p.id === match.params.id);
+const ArticleDetail = ({ match }) => {
+	// const detailPost = posts.find((p) => p.id === match.params.id);
+	const post = useFetch(
+		`http://www.muhammadadamfirdaus.com/blog/wp-json/wp/v2/posts?slug=${match.params.id}`
+	);
+	console.log(match);
+	console.log(post);
+	const dateOptions = {
+		weekday: "long",
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	};
 	// const transition = { duration: 0.5, ease: [0.6, 0.01, -0.05, 0.9] };
 
 	const pageTransition = {
@@ -38,7 +49,35 @@ const BlogDetailPost = ({ match }) => {
 		<>
 			<div className="App blog detail">
 				<Header />
-				<motion.div
+				<div className="content col col-3">
+					<div className="wrapper">
+						<div>
+							{post && (
+								<article>
+									<div className="wrapper">
+										<Link to="/article">
+											<span>Kembali</span>
+										</Link>
+										<h3>{post[0].title.rendered}</h3>
+										<span>
+											Ditulis pada:{" "}
+											{new Date(post[0].date).toLocaleDateString(
+												"id-ID",
+												dateOptions
+											)}
+										</span>
+										<div
+											dangerouslySetInnerHTML={{
+												__html: post[0].content.rendered,
+											}}
+										></div>
+									</div>
+								</article>
+							)}
+						</div>
+					</div>
+				</div>
+				{/* <motion.div
 					className="content col col-3"
 					initial="hidden"
 					animate="visible"
@@ -80,11 +119,11 @@ const BlogDetailPost = ({ match }) => {
 							</div>
 						</aside>
 					</div>
-				</motion.div>
+				</motion.div> */}
 				<Footer />
 			</div>
 		</>
 	);
 };
 
-export default BlogDetailPost;
+export default ArticleDetail;
