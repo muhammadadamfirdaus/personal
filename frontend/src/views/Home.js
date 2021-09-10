@@ -64,7 +64,7 @@ const Home = () => {
 	}, [animation, inView]);
 
 	const year = new Date().getFullYear();
-	const yearFrontEnd = Number(year - 2015);
+	const yearFrontEnd = Number(year - 2016);
 
 	// get design skill
 	const skillDesign = skills
