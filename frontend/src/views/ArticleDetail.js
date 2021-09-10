@@ -8,7 +8,7 @@ import useFetch from "../hooks/useFetch";
 const ArticleDetail = ({ match }) => {
 	// const detailPost = posts.find((p) => p.id === match.params.id);
 	const post = useFetch(
-		`http://www.muhammadadamfirdaus.com/blog/wp-json/wp/v2/posts?slug=${match.params.id}`
+		`https://www.muhammadadamfirdaus.com/blog/wp-json/wp/v2/posts?slug=${match.params.id}`
 	);
 	console.log(match);
 	console.log(post);

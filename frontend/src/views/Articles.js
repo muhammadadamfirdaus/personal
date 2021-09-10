@@ -36,7 +36,7 @@ const sequence = {
 
 const Articles = () => {
 	const posts = useFetch(
-		"http://www.muhammadadamfirdaus.com/blog/wp-json/wp/v2/posts"
+		"https://www.muhammadadamfirdaus.com/blog/wp-json/wp/v2/posts"
 	);
 	// const posts = useFetch(
 	// 	"http://www.muhammadadamfirdaus.com/blog/wp-json/wp/v2/posts"
